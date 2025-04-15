@@ -1,0 +1,69 @@
+
+The impact of human activities on Earth's climate has been unequivocally demonstrated
+by scientists over the past decade. In response, global leaders have adopted common 
+environmental goals to protect the planet. Consequently, the global energy production mix
+has shifted significantly towards green energy. Given the inherently complex nature of
+renewables, extensive research across various disciplines has been conducted to improve and 
+understand emerging technologies. Solar energy stands out as one of the most important energy
+resources for humanity, being clean, pollution-free and inexhaustible. Remarkably, the Earth
+receives enough solar energy in a matter of hours to meet the world's energy demand of an
+entire year. Advances in photovoltaic (PV) technology and reductions in manufacturing costs
+have led to a multifold increase in PV capacity, often characterized by decentralized deployment
+and fluctuating power output due to variable weather conditions.
+
+Accurate modeling of PV modules is of vital importance in many fields.
+It enables designers to optimize system performance and maximize cost-effectiveness.
+Power forecasts support grid operators in balancing power demand and supply, while
+plant operators utilize predictions for energy management and to achieve the best economic
+outcome. The challenges posed by volatile production are being addressed by battery
+systems, whose optimized charging management depends on reliable generation data.
+
+The performance of a PV module largely depends on the availability of solar 
+radiation and its conversion efficiency. These aspects are influenced by numerous
+physical parameters, including the geographical location of the
+site, panel orientation, weather conditions, surrounding obstructions,
+the electrical load etc. \cite[p. 1358f]{LoBrano}. Unsurprisingly, energy assessments
+based on simplistic models that assume a constant value for the conversion
+efficiency can yield erroneously optimistic predictions \cite{Wang2021}.
+Unfortunately, the information provided by the manufacturers often lacks the detail
+needed to exploit high-performance predictive tools. An analysis of information
+from over 400 manufacturers' websites revealed that the quality of this information is variable,
+sometimes inconsistent, and often inadequate for reliable designs \cite[p. 1161]{Orioli}.
+
+The variability of available manufacturing, meteorological and site-related data
+resulted in a wide spectrum of forecasting models, broadly classified
+into three main categories: physical, statistical and hybrid \cite{Ulbricht2013, Iheanetu2022}. 
+Physical models simulate the conversion of solar irradiation into electricity
+using physical equations. The more complex spectrum of these models can accurately describe
+the behavior of PV modules when high-quality input and calibration data are available.
+In contrast, statistical models aim to establish the relationship between input
+variables and the corresponding power output without relying on physical equations.
+Many statistical models require prior training on historical meteorological
+and generation datasets, where training involves calculating model parameters
+through mathematical optimization methods that accurately represent the
+relationship between the datasets and can generalize to unseen data.
+As might be expected, physical and statistical models can be combined to
+create hybrid models. Such combinations may overcome individual drawbacks
+and further improve accuracy, albeit with the potential downside of increased
+complexity and greater computational resource requirements.
+
+This thesis introduces an approach to predict the direct current
+(DC) power output of a PV system of arbitrary size and configuration under
+certain assumptions. A well-known five-parameter physical model
+builds the basis of this approach, which can be calibrated with a
+minimal set of data provided by manufacturers. Required meteorological
+parameters include temperature, wind speed, air pressure as well as global
+and diffuse horizontal radiation. The model also requires the geographical
+location of the PV system and the orientation of the individual PV arrays in
+order to estimate the input variables for the physical model. The 
+presented approach can be combined with a conversion model to predict
+the generated alternating current (AC) power required for load consumption
+and connection to the electrical grid.
+
+This thesis is structured as follows: Chapter \ref{sec:Solar Geometry and Radiation}
+introduces the basics of solar geometry and solar radiation. Chapter 
+\ref{sec:Photovoltaic system modeling and power prediction} details
+the physical modeling of PV systems and introduces the five-parameter model.
+In Chapter \ref{sec:Application and analysis of the model}, the presented model is
+applied to a 4.62 kW PV system and analyzed. Finally, Chapter \ref{sec:Conclusion}
+concludes the thesis and outlines potential directions for future work.

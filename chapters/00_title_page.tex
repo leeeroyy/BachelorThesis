@@ -1,0 +1,56 @@
+\begin{titlepage}
+    \sf
+
+    \newsavebox{\textblock}
+    \savebox{\textblock}{%
+    \begin{tabular}{@{}l@{}}
+        Technische Universit\"at M\"unchen \\
+        TUM School of Computation, Information and Technology \\
+        Department of Mathematics
+    \end{tabular}
+    }
+
+    \newlength{\textblockheight}
+    \setlength{\textblockheight}{\ht\textblock}
+
+    \noindent
+    \begin{minipage}{\textwidth}
+    \usebox{\textblock}%
+    \hfill
+    \raisebox{-15pt}[0pt][0pt]{
+        \includegraphics[height=1.35cm]{Jonas_TUM_schwarz.png}%
+    }
+    \end{minipage}
+
+    \begin{center}
+        
+        \vspace*{6.5cm}
+        
+        \Large
+        A thesis presented for the degree of \\
+        Bachelor of Science of Mathematics
+
+        \vspace*{0.8cm}
+        
+        \Large
+        \textbf{From Solar Geometry to Direct Current Output: A Mathematical Approach to Photovoltaic System Modeling} 
+            
+        \vspace{1cm}
+        
+        \Large 
+        %\textbf{Leon Holtkamp}
+        Leon Holtkamp
+
+        \vspace{1.3cm}
+        
+        \includegraphics[scale=0.9]{Jonas_CIT_schwarz.png}
+    \end{center}
+    \vspace*{\fill}
+    
+    \noindent
+    \begin{tabular}{ll}
+        Supervisor: & Prof. Dr. Oliver Junge \\
+        Advisor:    & Dr. Vadim Gorski         \\
+        Submission: & \today
+    \end{tabular}
+\end{titlepage}
