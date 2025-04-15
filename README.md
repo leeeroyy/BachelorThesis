@@ -25,29 +25,6 @@ The thesis is organized into the following chapters:
 5. **Conclusion**  
    Summarizes the findings, discusses limitations, and suggests directions for future research.
 
-## Key Features
-
-- **Five-Parameter Model:** A robust approach to modeling the current-voltage characteristics of PV cells.
-- **Thermal Models:** Includes both a simplified model and the Sandia National Laboratories model for estimating cell temperature.
-- **Error Analysis:** Evaluates model accuracy using relative mean bias error (rMBE) and relative mean absolute error (rMAE).
-
-## Data Sources
-
-Meteorological data, including temperature, wind speed, and irradiance, were obtained from nearby weather stations. The model was applied to a 4.62 kW PV system in Bavaria, Germany.
-
-## Figures and Tables
-
-The thesis includes several figures and tables to illustrate key concepts, such as:
-
-- Relationship between solar irradiance and cell temperature.
-- Influence of wind speed on module temperature.
-- Thermal coefficients for different module types and mounting configurations.
-
-## Tools and Software
-
-- **LaTeX:** Used for writing and formatting the thesis.
-- **MATLAB/Python:** (If applicable) Used for simulations and data analysis.
-
 ## Acknowledgments
 
 This thesis was supervised by **Prof. Dr. Oliver Junge** and advised by **Dr. Vadim Gorski** at the Technical University of Munich.
