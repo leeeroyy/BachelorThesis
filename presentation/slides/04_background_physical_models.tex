@@ -1,0 +1,24 @@
+\begin{frame}
+    \frametitle{Background to Physical Models}
+    \only<1>{
+        The general approach to assessing the electrical performance of a PV device is based on
+        the ability to analytically describe its current-voltage characteristic by modeling it
+        with an equivalent electrical circuit that includes some nonlinear components.
+    }
+    \only<2>{
+        \footnotesize
+        \begin{itemize}
+            \item Ideal model:
+            \begin{align*}
+                I &= I_{\text{L}} - I_{\text{D}} = I_{\text{L}} - I_{\text{0}} \Bigl[ \exp \Bigl( \frac{V}{nT} \Bigr) - 1 \Bigr]
+            \intertext{\item One-diode model with \(R_{s}\):}
+                I &= I_{\text{L}} - I_{\text{D}} = I_{\text{L}} - I_{\text{0}} \Bigl[ \exp \Bigl( \frac{V + IR_{\text{s}}}{nT} \Bigr) - 1 \Bigr]
+            \intertext{\item One-diode model with \(R_{\text{s}}\) and \(R_{\text{sh}}\):}
+                I &= I_{\text{L}} - I_{\text{D}} = I_{\text{L}} - I_{\text{0}} \Bigl[ \exp \Bigl( \frac{V + IR_{\text{s}}}{nT} \Bigr) - 1 \Bigr] - \frac{V + IR_{\text{s}}}{R_{\text{sh}}}
+            \intertext{\item Two-diode model:}
+                I &= I_{\text{L}} - I_{\text{D}_{1}} - I_{\text{D}_{2}} \nonumber \\
+                &= I_{\text{L}} - I_{0,1} \Bigl[ \exp \Bigl( \frac{V + IR_{\text{s}}}{n_1T} \Bigr) - 1 \Bigr] - I_{0,2} \Bigl[ \exp \Bigl( \frac{V + IR_{\text{s}}}{n_2T} \Bigr) - 1 \Bigr] - \frac{V + IR_{\text{s}}}{R_{\text{sh}}}
+            \end{align*}
+        \end{itemize}
+    }
+\end{frame}

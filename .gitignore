@@ -1,3 +1,6 @@
 .DS_Store
 thesis.*
 !thesis.tex
+presentation/presentation.*
+!presentation/presentation/slides
+!presentation/presentation.tex
