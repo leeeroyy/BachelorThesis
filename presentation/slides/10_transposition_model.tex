@@ -1,0 +1,17 @@
+\begin{frame}
+    \frametitle{Transposition Models}
+    Transposition models estimate the in-plane irradiance from global and diffuse
+    horizontal irradiance. They have the general form:
+    \begin{align}
+        G_{\text{c}} &= B_{\text{c}} + D_{\text{c}} + R_{\text{c}} \nonumber
+        \\[8pt]
+        B_{\text{c}} &= B_{\text{h}} \, \frac{\cos \nu}{\cos \psi_{\text{s}}} \nonumber
+        \\[0pt]
+        R_{\text{c}} &= G_{\text{h}} \, \tau_{R} \, \rho = G_{\text{h}} \, \frac{1 - \cos \beta}{2} \, \rho \nonumber
+         \\[8pt]
+        D_{\text{\text{c}}} &= D_{\text{h}} \, \tau_{D} \nonumber
+    \end{align}
+    where \(\nu\) is the surface incidence angle, \(\beta\) is the surface tilt, \(\psi_{s}\) is the solar
+    zenith angle, \(\rho\) is the surface albedo, and \(\tau_{R}\) and \(\tau_{D}\) are the
+    transposition factors for the beam and diffuse components, respectively.
+\end{frame}

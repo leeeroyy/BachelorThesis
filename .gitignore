@@ -2,3 +2,7 @@
 
 thesis.*
 !thesis.tex
+
+presentation/images
+presentation/presentation.*
+!presentation/presentation.tex

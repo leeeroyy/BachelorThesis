@@ -1,0 +1,20 @@
+\begin{frame}    
+    \frametitle{PV System Desgin and Modeling}
+    \only<1>{
+        \begin{itemize}
+            \item \textbf{Goal:} maximize the energy output of the system
+            \item \textbf{Idea:} organize modules in groups facing in the
+            same direction and connect them to a dedicated inverter with MPPT \\
+            \(\implies\) each group is operating at its own MPP
+            \item \textbf{Modeling:} simulate groups of modules connected to a
+            dedicated inverter, take the MPP as the operating point and estimate
+            the power output as the sum of the MPPs
+        \end{itemize}
+    }
+    \only<2>{
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.05]{Braun_Dach.png}
+        \end{figure}    
+    }
+\end{frame}
