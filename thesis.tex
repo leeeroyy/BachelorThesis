@@ -1,0 +1,92 @@
+\documentclass[german,a4paper,12pt,oneside]{article}
+
+\usepackage{definitions}
+\usepackage{packages}
+
+\renewcommand{\abstractname}{Zusammenfassung}
+
+\captionsetup[table]{labelfont=bf}
+\captionsetup[figure]{labelfont=bf}
+\graphicspath{{./images/}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\makenomenclature
+\renewcommand\nompreamble{\begin{multicols}{2}}
+\renewcommand\nompostamble{\end{multicols}}
+
+\begin{document}
+
+\input{chapters/00_title_page.tex}
+\newpage
+    
+\input{chapters/00_abstract_german.tex}
+\newpage
+
+\input{chapters/00_declaration.tex}
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\input{chapters/01_introduction.tex}
+\newpage
+
+\section{Solar geometry and radiation}
+\input{chapters/02_0_Solar_radiation_and_gemetry_intro.tex}
+\label{sec:Solar Geometry and Radiation}
+\subsection{Solar geometry and sun position}
+\input{chapters/02_1_Solar_Geometry_and_Sun_Position.tex}
+\label{sec:Solar Geometry}
+\subsection{Irradiance and radiation}
+\label{sec:Irradiance and Radiation}
+\input{chapters/02_2_Irradiance_and_Radiation.tex}
+\subsection{Estimating in-plane irradiance}
+\label{sec:Estimating in-plane irradiance}
+\input{chapters/02_3_Estimating_in_plane_irradiance.tex}
+\newpage
+
+\section{Photovoltaic system modeling and power prediction}
+\label{sec:Photovoltaic system modeling and power prediction}
+\input{chapters/03_0_Photovoltaic_system_modeling_and_performance_prediction_introduction.tex}
+\subsection{Background to physical models}
+\input{chapters/03_1_Background_to_physical_models.tex}
+\label{sec:Background to physical models}
+\subsection{Operating conditions}
+\input{chapters/03_2_Operating_conditions.tex}
+\label{sec:Operating_conditions}
+\subsection{Current-voltage characteristic and standard test conditions}
+\label{sec:I-V characteristic curve}
+\input{chapters/03_3_IV_characteristic_curve_and_STC.tex}
+\subsection{An improved five-parameter model}
+\input{chapters/03_4_An_improved_five_parameter_model.tex}
+\label{sec:Five_parameter_model}
+\subsection{Photovoltaic system modeling}
+\input{chapters/03_5_Photovoltaic_system_modeling.tex}
+\label{sec:Photovoltaic_system_modeling}
+\newpage
+
+\section{Application of the model and analysis of the results}
+\label{sec:Application and analysis of the model}
+\input{chapters/04_Application_and_analysis_of_the_model.tex}
+\newpage
+
+\section{Conclusion}
+\label{sec:Conclusion}
+\input{chapters/05_Conclusion.tex}
+\newpage
+
+{\footnotesize\listoffigures}
+\newpage
+
+{\footnotesize\listoftables}
+\newpage
+
+\input{chapters/nomenclature.tex}
+\setlength{\nomitemsep}{0.5pt}{\footnotesize\printnomenclature} % nomenclature is only printed with the right build recipe
+\newpage
+
+{\footnotesize\bibliography{references}{}\bibliographystyle{plain}}
+
+\end{document}

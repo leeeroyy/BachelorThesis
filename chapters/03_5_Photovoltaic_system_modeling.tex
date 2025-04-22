@@ -1,0 +1,68 @@
+
+As mentioned at the beginning of this chapter, the mathematical models
+presented in \ref{sec:Background to physical models} can
+be used to analytically describe the I-V characteristic curve
+of photovoltaic (PV) cells, modules, strings of modules, and arrays.
+The following definition of the configuration of an array allows
+the application of the single-diode five-parameter model to an array
+of PV modules.
+
+\begin{itemize}
+    \item \(N_\text{c}\): Number of cells connected in series in each module.
+    \item \(N_\text{m}\): Number of modules connected in series in each string.
+    \item \(N_\text{s}\): Total number of cells connected in series in each string, i.e. \(N_\text{c} N_\text{m}\).
+    \item \(N_\text{p}\): Number of strings connected in parallel in the array.
+\end{itemize}
+
+\noindent
+With these definitions, the governing equation of the five-parameter
+single-diode model can be adjusted to model an array of PV modules
+\cite{Ma2014_2, Tian2012}:
+
+\begin{align}
+    I = \; &\alpha_{\text{G}}N_\text{p}I_{\text{L}}(T) - N_\text{p}I_{0}(\alpha_{\text{G}}, T)\Biggl[\exp\biggl(\frac{\alpha_{\text{G}}(V + KI(T - T_{\text{ref}}))+I\frac{N_\text{s}}{N_\text{p}}R_{\text{s}}}{\alpha_{\text{G}}N_\text{s}nT}\biggr) - 1\Biggr] \nonumber \\
+                       &- \frac{\alpha_{\text{G}}(V + KI(T - T_{\text{ref}}))+I\frac{N_\text{s}}{N_\text{p}}R_{\text{s}}}{\frac{N_\text{s}}{N_\text{p}}R_{\text{sh}}}
+    \label{eq:IV_curve_equation_for_arrays}
+\end{align}
+
+\noindent
+The procedure presented in the last section is designed to accurately
+model the current-voltage characteristic of a single PV module.
+It utilizes the slopes of the I-V curve of a single module at
+STC in the short-circuit and open-circuit points to fit the model
+precisely at STC. To use Equation \ref{eq:IV_curve_equation_for_arrays}
+to predict the current-voltage characteristic of an array of PV modules,
+the parameters for a single module must first be determined
+using Equation \ref{eq:Orioli_IV_curve_governing_equation}
+following the described procedure. These parameters are then
+substituted into Equation \ref{eq:IV_curve_equation_for_arrays}
+with \(N_\text{s} = N_\text{m}\) and \(N_\text{p}\) as defined above. This adjustment
+accounts for the fact that the parameters have been determined
+to fit an entire module consisting of \(N_\text{c}\) series-connected cells.
+
+In practice, a PV array may consist of several strings of modules
+that are oriented in different directions. Each string receives
+varying amounts of irradiance depending on its orientation,
+resulting in distinct I-V curves for each string. Combining
+these strings into a single array without accounting for
+orientation differences can make it difficult for the inverter
+to locate the global maximum power point (MPP). To address
+this issue, modern PV systems typically connect strings facing
+the same direction to a dedicated inverter equipped with maximum
+power point tracking (MPPT) technology. MPPT dynamically adjusts
+the operating point of each string to its individual MPP by
+altering the impedance seen by the inverter, ensuring optimal
+performance \cite[p. 152f]{Mayfield}. Therefore, when modeling
+a PV array, it is both valid and practical to model groups of
+modules that are oriented in the same direction and connected
+to an inverter with MPPT separately. This modeling approach
+assumes that the operating point of each string corresponds
+to its individual maximum power point, and the total system
+output is obtained by summing the contributions of all separately
+modeled strings. This reflects real-world practices aimed at
+maximizing a PV system's output. By modeling each string
+individually based on its orientation, one can accurately
+simulate the overall performance of PV systems or plants
+consisting of multiple arrays, while accounting for practical
+considerations in PV system design.
+
