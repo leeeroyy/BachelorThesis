@@ -1,21 +1,35 @@
 \begin{frame}
-    \frametitle{Standard Test Conditions}
+    \frametitle{Standard Test Conditions (STC)}
     \only<1>{
-        Standard Test Conditions (STC) are an industry wide set of conditions under
-        which manufacturers test and rate the performance of PV modules
-        and report the results in their datasheets.
-        \vspace*{0.3cm}
-    }
-    \only<1-2>{
-        \begin{figure}
-            \centering
-            \includegraphics[scale=0.19]{images/Surfclub_Module_datasheet.png}
-        \end{figure}
+        \begin{itemize}
+            \item industry wide set of conditions under which manufacturers test and rate the performance of PV modules
+            \item results are often reported in module datasheets.
+        \end{itemize}
+        \vspace*{0.3cm}    
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.19]{images/Surfclub_Module_datasheet.png}
+        \caption{Snippet of a datasheet of a Trinasolar PV module.}
+    \end{figure}
     }
     \only<2>{
         \begin{figure}
             \centering
             \includegraphics[scale=0.19]{IV_characteristic_at_STC.png}
+            \caption{I-V and P-V curves of PV module TSM-330 DE06M.08(II) as described by the presented model at STC.}
         \end{figure}
+        \begin{table}
+            \centering
+            \scalebox{0.7}{
+                \begin{tabular}{l|cccc} 
+                    \hline
+                    \textbf{PV Module} & \(V_{\text{oc}}\) (V) & \(I_{\text{sc}}\) (A) & \(V_{\text{mp}}\) (V) & \(I_{\text{mp}}\) (A) \\
+                    \hline
+                    TSM-330 DE06M.08(II) & 40.6 & 10.4 & 9.76 & 33.8 \\
+                    \hline
+                \end{tabular}
+            }
+            \caption{\small Measurements at STC.}
+        \end{table}
     }
 \end{frame}

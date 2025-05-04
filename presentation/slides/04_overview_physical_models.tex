@@ -1,0 +1,59 @@
+\begin{frame}
+    \frametitle{Overview of Physical Models}
+    \only<1>{
+        \footnotesize
+        % \begin{itemize}
+        %     \item \textbf{Ideal model:}
+        %     \[
+        %         I = I_{\text{L}} - I_{\text{0}} \left[ \exp \left( \frac{V}{nT} \right) - 1 \right]
+        %     \]
+        %     \item \textbf{One-diode model with \(R_{\text{s}}\):}
+        %     \[
+        %         I = I_{\text{L}} - I_{\text{0}} \left[ \exp \left( \frac{V + IR_{\text{s}}}{nT} \right) - 1 \right]
+        %     \]
+        %     \item \textbf{One-diode model with \(R_{\text{s}}\) and \(R_{\text{sh}}\):}
+        %     \[
+        %         I = I_{\text{L}} - I_{\text{0}} \left[ \exp \left( \frac{V + IR_{\text{s}}}{nT} \right) - 1 \right] - \frac{V + IR_{\text{s}}}{R_{\text{sh}}}
+        %     \]
+        %     \item \textbf{Two-diode model:}
+        %     \[
+        %         \begin{aligned}
+        %             I &= I_{\text{L}} - I_{0,1} \left[ \exp \left( \frac{V + IR_{\text{s}}}{n_1T} \right) - 1 \right] \\
+        %             &\quad - I_{0,2} \left[ \exp \left( \frac{V + IR_{\text{s}}}{n_2T} \right) - 1 \right] - \frac{V + IR_{\text{s}}}{R_{\text{sh}}}
+        %         \end{aligned}
+        %     \]
+        % \end{itemize}
+        \begin{itemize}
+            \item Ideal model:
+            \begin{align}
+                I &= I_{\text{L}} - I_{\text{0}} \Bigl[ \exp \Bigl( \frac{V}{nT} \Bigr) - 1 \Bigr]
+                \label{eq:Three_parameter_model}
+            \intertext{\item One-diode model with \(R_{s}\):}
+                I &= I_{\text{L}} - I_{\text{0}} \Bigl[ \exp \Bigl( \frac{V + IR_{\text{s}}}{nT} \Bigr) - 1 \Bigr]
+                \label{eq:Four_parameter_model}
+            \intertext{\item One-diode model with \(R_{\text{s}}\) and \(R_{\text{sh}}\):}
+                I &= I_{\text{L}} - I_{\text{0}} \Bigl[ \exp \Bigl( \frac{V + IR_{\text{s}}}{nT} \Bigr) - 1 \Bigr] - \frac{V + IR_{\text{s}}}{R_{\text{sh}}}
+                \label{eq:Five_parameter_model}
+            \intertext{\item Two-diode model:}
+                I &= I_{\text{L}} - \sum_{i=1}^{2} I_{0,i} \Bigl[ \exp \Bigl( \frac{V + IR_{\text{s}}}{n_iT} \Bigr) - 1 \Bigr] - \frac{V + IR_{\text{s}}}{R_{\text{sh}}}
+                \label{eq:Seven_parameter_model}
+            \end{align}
+        \end{itemize}
+    }
+    \only<2>{
+        \textbf{Variables:} \(I\), \(V\)
+        \begin{itemize}
+            \item \(I\): current \hfill [\si{\ampere}]
+            \item \(V\): voltage \hfill [\si{\volt}]
+        \end{itemize}
+        \vspace{0.2cm}
+        \textbf{Parameters:} \(I_{\text{L}}, I_{\text{0(,i)}}, R_{\text{s}}, R_{\text{sh}}, n_{(i)}\)
+        \begin{itemize}
+            \item \(I_{\text{L}}\): light-generated current \hfill [\si{\ampere}]
+            \item \(I_{\text{0(,i)}}\): reverse saturation current \hfill [\si{\ampere}]
+            \item \(R_{\text{s}}\): series resistance \hfill [\si{\ohm}]
+            \item \(R_{\text{sh}}\): shunt resistance \hfill [\si{\ohm}]
+            \item \(n_{(i)}\): diode ideality factor \hfill [–]
+        \end{itemize}
+    }
+\end{frame}

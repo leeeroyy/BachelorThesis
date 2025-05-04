@@ -2,19 +2,20 @@
     \frametitle{PV System Desgin and Modeling}
     \only<1>{
         \begin{itemize}
-            \item \textbf{Goal:} maximize the energy output of the system
-            \item \textbf{Idea:} organize modules in groups facing in the
-            same direction and connect them to a dedicated inverter with MPPT \\
-            \(\implies\) each group is operating at its own MPP
-            \item \textbf{Modeling:} simulate groups of modules connected to a
-            dedicated inverter, take the MPP as the operating point and estimate
-            the power output as the sum of the MPPs
+            \item \textbf{Objective:} Maximize overall energy yield of the PV system.
+            \item \textbf{Approach:} 
+            Group modules by orientation and connect each group to a dedicated inverter with MPPT.\\
+            \(\Rightarrow\) Each group operates at its own maximum power point (MPP).
+            \item \textbf{Modeling Strategy:} 
+            Simulate each group of modules with its corresponding inverter, use the MPP as the operating point, and estimate the total power output as the sum of all group MPPs.
         \end{itemize}
     }
     \only<2>{
         \begin{figure}
             \centering
-            \includegraphics[scale=0.05]{Braun_Dach.png}
-        \end{figure}    
+            \includegraphics[scale=0.045]{Braun_Dach.png}
+            \caption{PV system with the ability to deactivate either of the
+            two modules flanking the dormer window during shading conditions.}
+        \end{figure}
     }
 \end{frame}

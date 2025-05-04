@@ -1,17 +1,46 @@
 \begin{frame}
     \frametitle{Transposition Models}
-    Transposition models estimate the in-plane irradiance from global and diffuse
-    horizontal irradiance. They have the general form:
-    \begin{align}
-        G_{\text{c}} &= B_{\text{c}} + D_{\text{c}} + R_{\text{c}} \nonumber
-        \\[8pt]
-        B_{\text{c}} &= B_{\text{h}} \, \frac{\cos \nu}{\cos \psi_{\text{s}}} \nonumber
-        \\[0pt]
-        R_{\text{c}} &= G_{\text{h}} \, \tau_{R} \, \rho = G_{\text{h}} \, \frac{1 - \cos \beta}{2} \, \rho \nonumber
-         \\[8pt]
-        D_{\text{\text{c}}} &= D_{\text{h}} \, \tau_{D} \nonumber
-    \end{align}
-    where \(\nu\) is the surface incidence angle, \(\beta\) is the surface tilt, \(\psi_{s}\) is the solar
-    zenith angle, \(\rho\) is the surface albedo, and \(\tau_{R}\) and \(\tau_{D}\) are the
-    transposition factors for the beam and diffuse components, respectively.
+    \only{
+        Transposition models estimate the in-plane irradiance from global and diffuse
+        horizontal irradiance. They have the general form:\footnote{The subscript \say{h}
+        indicates horizontal irradiance, while \say{c} (collector) indicates in-plane irradiance.}
+        \begin{align}
+            G_{\text{c}} &= B_{\text{c}} + D_{\text{c}} + R_{\text{c}}
+            \\[8pt]
+            B_{\text{c}} &= B_{\text{h}} \, \frac{\cos \nu}{\cos \psi_{\text{s}}}
+            \\[0pt]
+            R_{\text{c}} &= G_{\text{h}} \, \tau_{R} \, \rho = G_{\text{h}} \, \frac{1 - \cos \beta}{2} \, \rho
+             \\[8pt]
+            D_{\text{\text{c}}} &= D_{\text{h}} \, \tau_{D}
+        \end{align}
+        where \(\rho\) is the surface albedo, and \(\tau_{R}\) and \(\tau_{D}\) are the
+        transposition factors for the beam and diffuse components, respectively.
+    }<1>
+    \only{
+        The angles in the transposition model are required to correctly transpose
+        horizontal irradiance to the plane of the module.
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.11]{images/Solar_Geometry.png}
+            \caption{\small Visualization of angles used in transposition models.}
+        \end{figure}
+    }<2>    
+    \only{
+        \textbf{Surface orientation:}
+        \begin{itemize}
+            \item \(\alpha\): surface azimuth angle \hfill [\si{\degree}]
+            \item \(\beta\): surface tilt \hfill [\si{\degree}]
+        \end{itemize}
+        \textbf{Sun position:}
+        \begin{itemize}
+            \item \(\alpha_{\text{s}}\): solar azimuth angle \hfill [\si{\degree}]
+            \item \(\gamma_{\text{s}}\): solar altitude angle \hfill [\si{\degree}]
+            \item \(\psi_{\text{s}}\): solar zenith angle \hfill [\si{\degree}] % (\(\psi_{\text{s}} = 90 \si{\degree} - \gamma_{\text{s}}\)) 
+        \end{itemize}
+        \textbf{Additional angles:}
+        \begin{itemize}
+            \item \(\nu\) is the surface incidence angle \hfill [\si{\degree}]
+            \item \(\alpha_{\text{f}}\) is the wall-solar azimuth angle \hfill [\si{\degree}] % (\(\alpha_{\text{f}} = \alpha_{\text{s}} - \alpha \)) 
+        \end{itemize}
+    }<3>
 \end{frame}
